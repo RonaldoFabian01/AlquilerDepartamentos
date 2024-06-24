@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ArrendadorCalificacion.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">prueba</a> &gt; <a href="index.source.html" class="el_package">pe.edu.upc.renstate</a> &gt; <span class="el_source">ArrendadorCalificacion.java</span></div><h1>ArrendadorCalificacion.java</h1><pre class="source lang-java linenums">package pe.edu.upc.renstate;
+
+<span class="nc" id="L3">public class ArrendadorCalificacion {</span>
+
+    // Clase para representar un contrato de arrendamiento
+    static class Contrato {
+        private String arrendador;
+
+<span class="nc" id="L9">        public Contrato(String arrendador) {</span>
+<span class="nc" id="L10">            this.arrendador = arrendador;</span>
+<span class="nc" id="L11">        }</span>
+
+        public String getArrendador() {
+<span class="nc" id="L14">            return arrendador;</span>
+        }
+    }
+
+    // Clase para realizar operaciones relacionadas con arrendadores
+<span class="nc" id="L19">    static class Lambders {</span>
+        public static Contrato obtenerContrato(String idContrato) {
+            // Implementación simulada de obtener un contrato
+<span class="nc" id="L22">            return new Contrato(&quot;arrendador123&quot;);</span>
+        }
+
+        public static String calificarArrendador(String arrendador, int calificacion, String comentario) {
+<span class="nc bnc" id="L26" title="All 4 branches missed.">            if (calificacion &gt;= 1 &amp;&amp; calificacion &lt;= 5) {</span>
+                // Implementación simulada de calificar al arrendador
+<span class="nc" id="L28">                return &quot;Calificación exitosa&quot;;</span>
+            } else {
+<span class="nc" id="L30">                return &quot;Error: La calificación debe estar entre 1 y 5 estrellas&quot;;</span>
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso
+<span class="nc" id="L37">        String idContrato = &quot;id_contrato&quot;;</span>
+<span class="nc" id="L38">        Contrato contrato = Lambders.obtenerContrato(idContrato);</span>
+<span class="nc" id="L39">        int calificacion = 4;</span>
+<span class="nc" id="L40">        String comentario = &quot;El arrendador fue muy amable y atento.&quot;;</span>
+<span class="nc" id="L41">        String resultado = Lambders.calificarArrendador(contrato.getArrendador(), calificacion, comentario);</span>
+<span class="nc" id="L42">        System.out.println(resultado);</span>
+<span class="nc" id="L43">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

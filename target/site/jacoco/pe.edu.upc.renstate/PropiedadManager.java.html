@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PropiedadManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">prueba</a> &gt; <a href="index.source.html" class="el_package">pe.edu.upc.renstate</a> &gt; <span class="el_source">PropiedadManager.java</span></div><h1>PropiedadManager.java</h1><pre class="source lang-java linenums">package pe.edu.upc.renstate;
+
+<span class="nc" id="L3">public class PropiedadManager {</span>
+
+    // Clase para representar los detalles de una propiedad
+    static class DetallesPropiedad {
+        private String direccion;
+        private String[] caracteristicas;
+        private double precio;
+
+<span class="nc" id="L11">        public DetallesPropiedad(String direccion, String[] caracteristicas, double precio) {</span>
+<span class="nc" id="L12">            this.direccion = direccion;</span>
+<span class="nc" id="L13">            this.caracteristicas = caracteristicas;</span>
+<span class="nc" id="L14">            this.precio = precio;</span>
+<span class="nc" id="L15">        }</span>
+
+        // Getters para los detalles de la propiedad
+        public String getDireccion() {
+<span class="nc" id="L19">            return direccion;</span>
+        }
+
+        public String[] getCaracteristicas() {
+<span class="nc" id="L23">            return caracteristicas;</span>
+        }
+
+        public double getPrecio() {
+<span class="nc" id="L27">            return precio;</span>
+        }
+    }
+
+    // Clase para realizar operaciones relacionadas con propiedades
+<span class="nc" id="L32">    static class Lambders {</span>
+        public static String publicarPropiedad(DetallesPropiedad detallesPropiedad) {
+<span class="nc bnc" id="L34" title="All 6 branches missed.">            if (detallesPropiedad.getDireccion() != null &amp;&amp; detallesPropiedad.getCaracteristicas() != null &amp;&amp; detallesPropiedad.getPrecio() &gt; 0) {</span>
+                // Implementación simulada de publicar la propiedad
+<span class="nc" id="L36">                return &quot;Publicación exitosa&quot;;</span>
+            } else {
+<span class="nc" id="L38">                return &quot;Error: Información incompleta. Por favor, complete todos los campos requeridos.&quot;;</span>
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo de uso
+<span class="nc" id="L45">        DetallesPropiedad detallesPropiedad = new DetallesPropiedad(&quot;Av. Principal 123&quot;, new String[]{&quot;3 dormitorios&quot;, &quot;2 baños&quot;, &quot;amoblado&quot;}, 1500);</span>
+<span class="nc" id="L46">        String resultado = Lambders.publicarPropiedad(detallesPropiedad);</span>
+<span class="nc" id="L47">        System.out.println(resultado);</span>
+<span class="nc" id="L48">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
